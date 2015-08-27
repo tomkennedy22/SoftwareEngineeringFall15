@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<html>
+<body>
+
+<h1>Homepage</h1>
+
+<p>scores here</p>
+
+<iframe src="https://www.google.com/calendar/embed?src=1qirtujnpcpmugb4ttrtotaps8%40group.calendar.google.com&ctz=America/Chicago" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+
+</body>
+
+<script>
+$.ajax({
+	url: 'http://api.espn.com/v1/sports/baseball/mlb/events',
+	type: 'GET',
+    crossDomain: true,
+    dataType: 'jsonp'
+}).done(function(data){
+	console.log(data);
+})
+</script>
+</html>
